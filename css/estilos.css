@@ -1,0 +1,197 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+*{margin:0;
+    padding: 0;  /*para resetear todos los margenes*/
+
+}
+
+body{
+    font-family: verdana, geneva, serif;
+}
+
+header { padding: 20px 0;}
+
+div.contenedor{
+    width: 1200px;
+   margin: 0 auto;
+}
+
+/*navegacion*/
+
+.navegacion {
+    background-color: #db008d;
+}
+
+nav{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    
+}
+
+nav > ul > li{
+    float: left;
+} 
+
+/*Cada vez que se utiliza un float se debe limpiar*/
+
+nav ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*de la forma de arriba se limpia el float*/
+
+/*Para los enlaces, para darle un ancho*/
+
+nav ul li a{
+    display: inline-block;
+    width: 200px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+nav ul li a:hover {
+    background-color: #00b8e4;
+}
+
+/*Segundo Nivel  */
+
+nav ul ul {
+    position: absolute;
+   top: 100%;
+    background-color: rgba(0,184, 228, 0.7);
+    display:none;
+    
+}
+nav ul li:hover>ul{
+    display: block;
+    
+}
+nav ul li:hover{    background-color: rgba(0,184, 228, 0.7);
+}
+
+/**Contenido Principal*/
+
+div.contenido::after { /*limpiamos el float*/
+    content: '';
+    display: block;
+    clear: both;
+
+}
+
+main{width: 70%;
+    float: left;
+    padding-right: 40px;
+}
+
+
+article{
+    margin-top: 30px;
+}
+h2{color:#00b8e4; 
+margin-bottom: 20px;}
+
+article img {
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+}
+
+article p{
+    line-height: 2;
+    text-align: justify;
+    
+}
+
+.boton{
+background-color: #00b8e4;
+padding: 10px 30px;
+display: inline-block;
+margin-top: 10px;  
+text-decoration: none;
+color: #ffffff;
+font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*barra lateral o sidebar*/
+
+aside{margin-top: 30px;
+    width: 30%;
+    float: right;
+    
+}
+
+aside ul {
+   list-style: none;
+    
+}
+
+aside ul li {
+    padding: 10px 0 10px 10px;
+}
+
+aside ul li:hover{background-color:#00b8e4; cursor: pointer; }
+
+aside ul li a{
+    color:#00b8e4;
+    text-decoration: none;
+}
+
+aside ul li:hover a{
+    color: #ffffff;
+}
+
+/*Footer*/
+
+footer{
+    background-color:#db008d;
+    padding-top: 40px;
+    margin-top: 30px;
+}
+
+footer h2{
+    color:#ffffff;
+;}
+
+footer .contenedor::after{   /*limpiamos el float*/
+ content: '';
+    display: block;
+    clear: both;   
+}
+footer div.nosotros{
+    float: left;
+    width: 30%;
+    color:#ffffff;
+}
+
+footer div.menu{
+    float: right;
+    width: 40%;
+  text-align: right;  
+}
+
+footer nav ul li a{
+    width: auto;
+}
+
+p.copywright{
+    padding: 20px 0 ;
+    text-align: center;
+    color: #ffffff;
+}
